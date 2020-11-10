@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 14:37:25 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/05 15:46:50 by znajda        ########   odam.nl         */
+/*   Updated: 2020/11/10 05:12:54 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int		main(void)
 	unsigned int start = 4;
 	unsigned int len = 15;
 
+	//testeroni 2
 	sub = ft_substr(s, start, len);
 	printf("This is a substring test:%s", sub);
 	exit(0);
