@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memccpy.c                                       :+:    :+:            */
+/*   main.c                                             :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/12 07:27:44 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/12 07:36:19 by znajda        ########   odam.nl         */
+/*   Created: 2020/11/12 08:36:31 by znajda        #+#    #+#                 */
+/*   Updated: 2020/11/12 09:31:19 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+int		main(void)
 {
-	char *str;
-	char *org;
+	char *s1 = "YOoOOooOo lETS GO GAMER";
+	char *s2 = "yOoooOooOo lETS Go GaMER";
+	size_t n = 10;
+	int val;
 
-	str = (char *)dest;
-	org = (char *)src;
-	while (n && *org != c)
-	{
-		*str = *org;
-		str++;
-		org++;
-		n--;
-	}
-	return (dest);
+	val = ft_memcmp(s1, s2, n);
+	printf("Return value is:%d\n", val);
 }

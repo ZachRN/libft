@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memccpy.c                                       :+:    :+:            */
+/*   main.c                                             :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/12 07:27:44 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/12 07:36:19 by znajda        ########   odam.nl         */
+/*   Created: 2020/11/12 07:56:54 by znajda        #+#    #+#                 */
+/*   Updated: 2020/11/12 08:34:58 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n);
+
+int		main(void)
 {
-	char *str;
-	char *org;
+	char *src = "This is a test string, get destroyed people";
+	char c = '\0';
+	size_t n = 100;
 
-	str = (char *)dest;
-	org = (char *)src;
-	while (n && *org != c)
-	{
-		*str = *org;
-		str++;
-		org++;
-		n--;
-	}
-	return (dest);
+	src = ft_memchr(src,c,n);
+	printf("Pointer Location in string:%p\nAnd the String:%s",src,src);
 }

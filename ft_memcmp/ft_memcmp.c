@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memccpy.c                                       :+:    :+:            */
+/*   ft_memcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/12 07:27:44 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/12 07:36:19 by znajda        ########   odam.nl         */
+/*   Created: 2020/11/12 08:37:50 by znajda        #+#    #+#                 */
+/*   Updated: 2020/11/12 09:31:55 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char *str;
-	char *org;
+	unsigned char *str;
+	unsigned char *str2;
 
-	str = (char *)dest;
-	org = (char *)src;
-	while (n && *org != c)
+	str = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while (n > 1)
 	{
-		*str = *org;
+		if (*str != *str2)
+			break ;
 		str++;
-		org++;
+		str2++;
 		n--;
 	}
-	return (dest);
+	return (*str - *str2);
 }

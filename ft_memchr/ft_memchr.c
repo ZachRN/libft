@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memccpy.c                                       :+:    :+:            */
+/*   ft_memchr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/12 07:27:44 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/12 07:36:19 by znajda        ########   odam.nl         */
+/*   Created: 2020/11/12 07:56:48 by znajda        #+#    #+#                 */
+/*   Updated: 2020/11/12 08:32:53 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char *str;
-	char *org;
+	char *temp;
 
-	str = (char *)dest;
-	org = (char *)src;
-	while (n && *org != c)
+	temp = (char *)s;
+	while (temp && n)
 	{
-		*str = *org;
-		str++;
-		org++;
+		if (*temp == c)
+			return (temp);
+		temp++;
 		n--;
 	}
-	return (dest);
+	return (temp);
 }
