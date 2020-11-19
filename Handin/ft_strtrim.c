@@ -6,21 +6,11 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 17:32:32 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/05 18:16:44 by znajda        ########   odam.nl         */
+/*   Updated: 2020/11/19 13:04:23 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-static int	ft_strlen(char const *s1)
-{
-	int i;
-
-	i = 0;
-	while (s1[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 static int	trimmer(char const *s1, char const *set, int i)
 {

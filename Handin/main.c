@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/19 11:15:30 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/19 12:05:26 by znajda        ########   odam.nl         */
+/*   Updated: 2020/11/19 13:16:12 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,18 @@ int		main(void)
 	ft_bzero(&str5[10], n);
 	printf("%s\n",str);
 	printf("-------------------------\n");
+	printf("THIS IS FT_STRTRIM TEST\n");
+	char str6[50] = "                TEST          ";
+	char *trim;
+	trim = ft_strtrim(str6, " ");
+	printf("%s\n",trim);
+	printf("-------------------------\n");
+	printf("THIS IS A FT_STRJOIN TEST\n");
+	char *str7 = "Testeroni ";
+	char *str8 = "PAPERONI";
+	char *join;
+	join = ft_strjoin(str7,str8);
+	printf("%s\n",join);
+	printf("-------------------------\n");
+	exit(0);
 }

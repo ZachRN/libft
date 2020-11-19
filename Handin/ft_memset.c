@@ -6,12 +6,11 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 19:14:40 by zachary       #+#    #+#                 */
-/*   Updated: 2020/11/19 12:23:14 by znajda        ########   odam.nl         */
+/*   Updated: 2020/11/19 13:12:24 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

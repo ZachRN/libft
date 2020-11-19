@@ -6,21 +6,11 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 15:51:36 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/05 16:06:30 by znajda        ########   odam.nl         */
+/*   Updated: 2020/11/19 13:12:36 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-static int	ft_strlen(char const *s1)
-{
-	int i;
-
-	i = 0;
-	while (s1[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {

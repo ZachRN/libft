@@ -6,9 +6,11 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 10:03:54 by zachary       #+#    #+#                 */
-/*   Updated: 2020/10/30 10:07:46 by zachary       ########   odam.nl         */
+/*   Updated: 2020/11/19 13:11:47 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_isdigit(int c)
 {

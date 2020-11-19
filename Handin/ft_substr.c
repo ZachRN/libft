@@ -6,11 +6,11 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 15:07:28 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/05 15:39:59 by znajda        ########   odam.nl         */
+/*   Updated: 2020/11/19 13:13:11 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
