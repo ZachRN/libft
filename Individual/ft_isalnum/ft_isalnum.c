@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_isalnum.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: znajda <znajda@student.codam.nl>             +#+                     */
+/*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/12 11:32:03 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/19 10:55:19 by znajda        ########   odam.nl         */
+/*   Created: 2020/10/30 10:11:02 by zachary       #+#    #+#                 */
+/*   Updated: 2020/10/30 10:13:46 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int		main(void)
+int		ft_isalnum(int c)
 {
-	
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	return (0);
 }

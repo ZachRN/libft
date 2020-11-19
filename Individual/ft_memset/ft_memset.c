@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_memset.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: znajda <znajda@student.codam.nl>             +#+                     */
+/*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/12 11:32:03 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/19 10:55:19 by znajda        ########   odam.nl         */
+/*   Created: 2020/11/08 19:14:40 by zachary       #+#    #+#                 */
+/*   Updated: 2020/11/10 04:48:52 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <stdio.h>
 
-int		main(void)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	
+	unsigned char	*str;
+
+	str = (unsigned char *)s;
+	if (s == 0)
+		return (s;
+	while (*str && n > 0)
+	{
+		*str = c;
+		str++;
+		n--;
+	}
+	return (s);
 }

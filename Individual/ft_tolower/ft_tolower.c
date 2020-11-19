@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_tolower.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: znajda <znajda@student.codam.nl>             +#+                     */
+/*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/12 11:32:03 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/19 10:55:19 by znajda        ########   odam.nl         */
+/*   Created: 2020/10/30 10:44:06 by zachary       #+#    #+#                 */
+/*   Updated: 2020/10/30 10:44:46 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int		main(void)
+int		ft_tolower(int c)
 {
-	
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }

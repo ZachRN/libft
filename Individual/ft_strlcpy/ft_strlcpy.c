@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_strlcpy.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: znajda <znajda@student.codam.nl>             +#+                     */
+/*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/12 11:32:03 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/19 10:55:19 by znajda        ########   odam.nl         */
+/*   Created: 2020/11/04 18:04:10 by zachary       #+#    #+#                 */
+/*   Updated: 2020/11/04 20:15:34 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int		main(void)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	
+	size_t i;
+
+	i = 0;
+	while ((i < size - 1) && (src[i] != '\0'))
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	while (src[i] != '\0')
+		i++;
+	return (i);
 }

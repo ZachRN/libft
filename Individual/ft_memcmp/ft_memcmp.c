@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_memcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/12 11:32:03 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/19 10:55:19 by znajda        ########   odam.nl         */
+/*   Created: 2020/11/12 08:37:50 by znajda        #+#    #+#                 */
+/*   Updated: 2020/11/12 09:31:55 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int		main(void)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	
+	unsigned char *str;
+	unsigned char *str2;
+
+	str = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while (n > 1)
+	{
+		if (*str != *str2)
+			break ;
+		str++;
+		str2++;
+		n--;
+	}
+	return (*str - *str2);
 }
