@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/19 11:15:30 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/19 14:55:28 by znajda        ########   odam.nl         */
+/*   Updated: 2020/11/19 16:38:45 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void ft_strchr_test(void)
 	printf("THIS IS FT_STRCHR TEST\n");
 	char *str = "lmao nerd";
 	char c = 'y';
-	printf("%s",ft_strchr(str,c));
+	printf("%s\n",ft_strchr(str,c));
 }
 
 void ft_strtrim_test(void)
@@ -63,6 +63,19 @@ void ft_strjoin_test(void)
 	printf("%s\n",join);
 }
 
+void ft_putnbr_fd_test(void)
+{
+	printf("THIS IS A FT_PUTNBR_FD TEST\n");
+	ft_putnbr_fd(5885,1);
+	printf("\n");
+	ft_putnbr_fd(31231225,1);
+	printf("\n");
+	ft_putnbr_fd(-5831285,1);
+	printf("\n");
+	ft_putnbr_fd(-53123185,1);
+	printf("\n");
+}
+
 
 int		main(void)
 {
@@ -76,6 +89,8 @@ int		main(void)
 	ft_strjoin_test();
 	printf("-------------------------\n");
 	ft_strchr_test();
+	printf("-------------------------\n");
+	ft_putnbr_fd_test();
 	printf("-------------------------\n");
 	exit(0);
 }
