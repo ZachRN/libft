@@ -6,11 +6,9 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 11:05:24 by zachary       #+#    #+#                 */
-/*   Updated: 2020/11/19 13:12:47 by znajda        ########   odam.nl         */
+/*   Updated: 2020/11/19 14:49:22 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_strlen(const char *str)
 {

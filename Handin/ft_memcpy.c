@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/10 20:26:18 by zachary       #+#    #+#                 */
-/*   Updated: 2020/11/16 14:06:12 by zachary       ########   odam.nl         */
+/*   Updated: 2020/11/19 15:01:07 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char *str;
-	char *str2;
-	unsigned int i;
+	char			*str;
+	char			*str2;
+	unsigned int	i;
 
 	str = (char *)dest;
 	str2 = (char *)src;

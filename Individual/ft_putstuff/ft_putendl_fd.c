@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isascii.c                                       :+:    :+:            */
+/*   ft_putendl_fd.c                                    :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: zachary <zachary@student.codam.nl>           +#+                     */
+/*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/30 10:19:56 by zachary       #+#    #+#                 */
-/*   Updated: 2020/11/19 14:59:47 by znajda        ########   odam.nl         */
+/*   Created: 2020/11/19 14:38:48 by znajda        #+#    #+#                 */
+/*   Updated: 2020/11/19 14:40:33 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isascii(int c)
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
+	ft_putchar_fd('\n', fd);
 }
