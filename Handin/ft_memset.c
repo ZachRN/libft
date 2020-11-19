@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 19:14:40 by zachary       #+#    #+#                 */
-/*   Updated: 2020/11/10 04:48:52 by zachary       ########   odam.nl         */
+/*   Updated: 2020/11/19 12:23:14 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	str = (unsigned char *)s;
 	if (s == 0)
-		return (s;
+		return (s);
 	while (*str && n > 0)
 	{
 		*str = c;
