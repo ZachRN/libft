@@ -1,18 +1,15 @@
-NAME = libft
-OBJ_FILES = main.o test.o
+NAME = libft.a
+OBJ_FILES = main.c ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memccpy.c ft_memchr.c
 HEADER_FILES = libft.h
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJ_FILES)
-	$(CC) -o $@ $^
-
-%.o: %.c $(HEADER_FILES)
-	$(CC) -c $(CFLAGS) -o $@ $<
+$(NAME):
+	gcc $(CFLAGS) -o $(NAME) $(OBJ_FILES)
 
 clean:
-	rm -f $(OBJ_FILES)
+	rm -f *.o
 
 fclean: clean
 	rm -f $(NAME)
