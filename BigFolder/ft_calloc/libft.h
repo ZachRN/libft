@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 11:20:57 by zachary       #+#    #+#                 */
-/*   Updated: 2020/12/03 16:36:36 by znajda        ########   odam.nl         */
+/*   Updated: 2020/11/26 10:25:20 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+char	*ft_strdup(const char *s);
 
 #endif
