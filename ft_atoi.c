@@ -6,30 +6,33 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 10:46:56 by zachary       #+#    #+#                 */
-/*   Updated: 2020/11/19 14:59:18 by znajda        ########   odam.nl         */
+/*   Updated: 2020/12/10 16:39:59 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_atoi(const char *c)
 {
-	int i;
-	int m;
-	int value;
+	int 			i;
+	int 		sign;
+	long int 	value;
 
 	i = 0;
-	m = 0;
+	sign = 1;
 	value = 0;
-	if (c[i] == 45)
+	while (*c == 32 || (*c >= 9 && *c <= 13))
+		c++;
+	if (*c == 45 || *c == 43)
 	{
-		m = 1;
-		i = 1;
+		if (*c == 45)
+			sign = -1;
+		c++;
 	}
-	while (c[i] >= 48 && c[i] <= 57)
+	while (*c >= 48 && *c <= 57)
 	{
-		value = (value * 10) + (c[i] - 48);
-		i++;
+		value = (value * 10) + (*c - 48);
+		c++;
 	}
-	if (m == 1)
-		value = value * -1;
-	return (value);
+	return (int)(value * sign);
 }

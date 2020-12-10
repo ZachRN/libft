@@ -6,11 +6,12 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/26 07:59:32 by znajda        #+#    #+#                 */
-/*   Updated: 2020/12/10 16:40:19 by znajda        ########   odam.nl         */
+/*   Updated: 2020/11/26 09:21:39 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	numcheck(int n)
 {
