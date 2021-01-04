@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 10:46:56 by zachary       #+#    #+#                 */
-/*   Updated: 2020/12/23 17:26:59 by zachary       ########   odam.nl         */
+/*   Updated: 2021/01/04 11:17:02 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ int		ft_atoi(const char *c)
 	}
 	while (*c >= 48 && *c <= 57)
 	{
+		if (((value * 10 * sign) > 922337203685477580 && *c > 55)
+		|| (value * 10 * sign) >= 9223372036854775800)
+			return (-1);
+		else if (((value * 10 * sign) < -922337203685477580 && *c > 56)
+		|| (value * 10 * sign) <= -9223372036854775800)
+			return (0);
 		value = (value * 10) + (*c - 48);
 		c++;
 	}

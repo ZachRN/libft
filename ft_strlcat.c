@@ -6,33 +6,26 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 20:21:00 by zachary       #+#    #+#                 */
-/*   Updated: 2020/11/19 14:56:35 by znajda        ########   odam.nl         */
+/*   Updated: 2021/01/04 15:03:52 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//when coming back to this tomorrow, this is strlcpy which i already made
+
 size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int x;
-	unsigned int y;
-	unsigned int z;
+	size_t i;
 
-	x = 0;
-	y = 0;
-	z = 0;
-	while (dst[x] != '\0')
-		x++;
-	while (src[z] != '\0')
-		z++;
-	while (src[y] != '\0' && y < size)
+	i = 0;
+	if (size == 0)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && i < (size - 1))
 	{
-		dst[x] = src[y];
-		x++;
-		y++;
+		dst[i] = src[i];
+		i++;
 	}
-	if (src[y] == '\0' && y < size)
-		y--;
-	dst[x] = '\0';
-	return (z + y);
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
