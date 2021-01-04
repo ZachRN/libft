@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 17:32:32 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/19 13:04:23 by znajda        ########   odam.nl         */
+/*   Updated: 2021/01/04 05:45:08 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,18 @@ char		*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	char	*str;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	front = 0;
 	i = 0;
 	end = ft_strlen(s1) - 1;
-	while (trimmer(s1, set, front) == 1)
+	while (trimmer(s1, set, front) == 1 && s1[front] != '\0')
 		front++;
-	while (trimmer(s1, set, end) == 1)
+	while (trimmer(s1, set, end) == 1 && end >= 0)
 		end--;
-	str = (char *)malloc(sizeof(char) * (end - front + 1));
+	if (front <= end)
+		if (!(str = (char *)malloc(sizeof(char) * (end - front + 2))))
+			return (NULL);
 	while (front <= end)
 	{
 		str[i] = s1[front];

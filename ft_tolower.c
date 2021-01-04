@@ -6,13 +6,13 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 10:44:06 by zachary       #+#    #+#                 */
-/*   Updated: 2020/11/19 14:48:31 by znajda        ########   odam.nl         */
+/*   Updated: 2020/12/23 18:17:43 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
-		return (c + 32);
+		c += 32;
 	return (c);
 }

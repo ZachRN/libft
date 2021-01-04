@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/19 11:15:30 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/19 16:38:45 by znajda        ########   odam.nl         */
+/*   Updated: 2020/12/10 18:19:13 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void ft_strchr_test(void)
 {
 	printf("THIS IS FT_STRCHR TEST\n");
 	char *str = "lmao nerd";
-	char c = 'y';
+	char c = 'a';
 	printf("%s\n",ft_strchr(str,c));
 }
 
