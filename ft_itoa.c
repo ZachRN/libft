@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/26 07:59:32 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/26 09:21:39 by znajda        ########   odam.nl         */
+/*   Updated: 2021/01/05 12:53:06 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ static int	numcheck(int n)
 	int counter;
 
 	counter = 0;
+	if (n < 0)
+		counter++;
 	if (n != 0)
 	{
 		while (n != 0)
@@ -36,17 +38,15 @@ static int	currentnum(int n, int strlen)
 	int i;
 
 	i = 0;
-	if (n < 0)
-	{
-		n *= -1;
-	}
 	while (i < strlen - 1)
 	{
 		n /= 10;
 		i++;
 	}
-	while (n > 9)
+	while (n > 9 || n < -9)
 		n %= 10;
+	if (n < 0)
+		n *= -1;
 	return (n);
 }
 
@@ -60,11 +60,14 @@ char		*ft_itoa(int n)
 	i = 0;
 	j = 0;
 	strlen = numcheck(n);
-	str = (char *)malloc(sizeof(char) * (strlen + 2));
+	str = (char *)malloc(sizeof(char) * (strlen + 1));
+	if (!str)
+		return (NULL);
 	if (n < 0)
 	{
 		str[0] = '-';
 		j = 1;
+		i = 1;
 	}
 	while (i < strlen)
 	{
@@ -72,5 +75,6 @@ char		*ft_itoa(int n)
 		j++;
 		i++;
 	}
-	return (&str[0]);
+	str[j] = '\0';
+	return (str);
 }
