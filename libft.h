@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 11:20:57 by zachary       #+#    #+#                 */
-/*   Updated: 2021/01/08 15:01:03 by zachary       ########   odam.nl         */
+/*   Updated: 2021/01/12 23:11:35 by zachary       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_atoi(const char *c);
 void	ft_bzero(void *s, size_t n);
@@ -45,5 +51,6 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	**ft_split(char const *s, char c);
 void	*ft_memmove(void *dest, const void *src, size_t n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
