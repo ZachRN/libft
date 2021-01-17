@@ -1,5 +1,5 @@
 NAME = libft.a
-REG_OBJ_FILES = ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o\
+REG_OBJ_FILES = ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o\
 ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memccpy.o\
 ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o\
 ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o\
