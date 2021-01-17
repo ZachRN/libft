@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_substr.c                                        :+:    :+:            */
+/*   ft_lstmap.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/05 15:07:28 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/05 15:39:59 by znajda        ########   odam.nl         */
+/*   Created: 2021/01/17 16:52:08 by znajda        #+#    #+#                 */
+/*   Updated: 2021/01/17 20:38:02 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char			*str;
-	unsigned int	i;
+	t_list *savefirst;
+	t_list *toadd;
 
-	i = 0;
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (str == NULL)
+	if (!lst || !f)
 		return (NULL);
-	while (s[start] != '\0' && i < len)
+	savefirst = NULL;
+	while (lst)
 	{
-		str[i] = s[start];
-		i++;
-		start++;
+		toadd = ft_lstnew(f(lst->content));
+		if (!toadd)
+		{
+			ft_lstclear(&lst, del);
+			ft_lstclear(&savefirst, del);
+		}
+		else
+		{
+			lst = lst->next;
+			ft_lstadd_back(&savefirst, toadd);
+		}
 	}
-	str[i] = '\0';
-	return ((char *)&str[0]);
+	return (savefirst);
 }

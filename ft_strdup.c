@@ -6,19 +6,17 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/26 09:45:41 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/26 10:28:36 by znajda        ########   odam.nl         */
+/*   Updated: 2021/01/17 20:39:37 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//use memset maybe here? JUST KIDDING MEMSET DOESNT WORK SMILE
-
 char	*ft_strdup(const char *s)
 {
-	char *str;
-	int strlen;
-	int i;
+	char	*str;
+	int		strlen;
+	int		i;
 
 	strlen = ft_strlen(s);
 	str = (char *)malloc(sizeof(char) * (strlen + 1));

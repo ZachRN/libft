@@ -6,13 +6,11 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 12:01:49 by znajda        #+#    #+#                 */
-/*   Updated: 2020/12/10 15:57:18 by znajda        ########   odam.nl         */
+/*   Updated: 2021/01/17 20:37:38 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static void	free_my_lines(char **strsplit, int line)
 {
@@ -75,7 +73,7 @@ static char	**wordfill(char const *s, char c, char **strsplit)
 	return (&strsplit[0]);
 }
 
-static int		word_amount(const char *s, char c)
+static int	word_amount(const char *s, char c)
 {
 	int		pos;
 	int		words;
@@ -93,7 +91,7 @@ static int		word_amount(const char *s, char c)
 	return (words);
 }
 
-char			**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**strsplit;
 	int		words;
