@@ -30,6 +30,9 @@ clean:
 bonus:
 	$(MAKE) WITH_BONUS=1 all
 
+so:
+	gcc -shared -o libft.so $(REG_OBJ_FILES)
+
 fclean: clean
 	rm -f $(NAME)
 
