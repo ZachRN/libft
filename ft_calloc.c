@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/26 11:02:37 by znajda        #+#    #+#                 */
-/*   Updated: 2021/01/17 21:33:10 by znajda        ########   odam.nl         */
+/*   Updated: 2021/01/17 21:42:31 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,13 @@ void	*ft_calloc(size_t nmeb, size_t size)
 {
 	void *memory;
 
+	if (nmeb == 0 || size == 0)
+	{
+		nmeb = 1;
+		size = 1;
+	}
 	memory = malloc(nmeb * size);
-	if (!memory)
-		return (NULL);
-	ft_bzero(memory, (nmeb * size));
+	if (memory)
+		ft_bzero(memory, (nmeb * size));
 	return (memory);
 }
