@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/14 21:23:59 by zachary       #+#    #+#                 */
-/*   Updated: 2021/01/14 22:39:12 by zachary       ########   odam.nl         */
+/*   Updated: 2021/02/10 15:19:08 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list *delete;
+	t_list *target;
 
 	if (!lst)
 		return ;
-	delete = lst;
+	target = lst;
 	if (del)
 	{
 		lst = lst->next;
-		del(delete->content);
-		free(delete);
+		del(target->content);
+		free(target);
 	}
 	return ;
 }

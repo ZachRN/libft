@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/14 14:38:13 by zachary       #+#    #+#                 */
-/*   Updated: 2021/01/14 14:40:15 by zachary       ########   odam.nl         */
+/*   Updated: 2021/01/30 14:52:32 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *tmp;
-
-	while (lst)
-	{
-		tmp = lst;
+	if (!lst)
+		return (NULL);
+	while (lst->next)
 		lst = lst->next;
-		if (!lst)
-			return (tmp);
-	}
-	return (NULL);
+	return (lst);
 }

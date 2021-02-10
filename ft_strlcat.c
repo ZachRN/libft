@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 20:21:00 by zachary       #+#    #+#                 */
-/*   Updated: 2021/01/05 09:10:07 by zachary       ########   odam.nl         */
+/*   Updated: 2021/01/29 13:53:53 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	j = ft_strlen(dst);
 	k = ft_strlen(src);
-	if (size - 1 <= j || size == 0)
+	if (size <= j)
 		return (k + size);
-	while ((j + i) < (size - 1))
+	while ((j + i) < (size - 1) && src[i])
 	{
 		dst[j + i] = src[i];
 		i++;

@@ -6,31 +6,31 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/17 16:52:08 by znajda        #+#    #+#                 */
-/*   Updated: 2021/01/17 20:38:02 by znajda        ########   odam.nl         */
+/*   Updated: 2021/01/28 05:52:07 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *l, void *(*f)(void *), void (*del)(void *))
 {
 	t_list *savefirst;
 	t_list *toadd;
 
-	if (!lst || !f)
+	if (!l || !f)
 		return (NULL);
 	savefirst = NULL;
-	while (lst)
+	while (l)
 	{
-		toadd = ft_lstnew(f(lst->content));
+		toadd = ft_lstnew(f(l->content));
 		if (!toadd)
 		{
-			ft_lstclear(&lst, del);
+			ft_lstclear(&l, del);
 			ft_lstclear(&savefirst, del);
 		}
 		else
 		{
-			lst = lst->next;
+			l = l->next;
 			ft_lstadd_back(&savefirst, toadd);
 		}
 	}
