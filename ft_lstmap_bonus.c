@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstmap.c                                        :+:    :+:            */
+/*   ft_lstmap_bonus.c                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/17 16:52:08 by znajda        #+#    #+#                 */
-/*   Updated: 2021/02/10 15:56:54 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/10 16:14:35 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (!lst || !f)
 		return (NULL);
 	savefirst = NULL;
-	while (l)
+	while (lst)
 	{
 		toadd = ft_lstnew(f(lst->content));
 		if (!toadd)
