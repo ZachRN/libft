@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/26 07:59:32 by znajda        #+#    #+#                 */
-/*   Updated: 2021/01/05 12:53:06 by zachary       ########   odam.nl         */
+/*   Updated: 2021/02/24 05:38:54 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	numcheck(int n)
 {
-	int counter;
+	int	counter;
 
 	counter = 0;
 	if (n < 0)
@@ -35,7 +35,7 @@ static int	numcheck(int n)
 
 static int	currentnum(int n, int strlen)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < strlen - 1)
@@ -50,7 +50,7 @@ static int	currentnum(int n, int strlen)
 	return (n);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		strlen;

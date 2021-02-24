@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 13:05:15 by zachary       #+#    #+#                 */
-/*   Updated: 2020/11/19 14:57:09 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/24 05:45:37 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *big, const char *small, size_t len)
 {
-	unsigned int i;
-	unsigned int j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	if (small[0] == '\0')

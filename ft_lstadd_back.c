@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/14 19:10:04 by zachary       #+#    #+#                 */
-/*   Updated: 2021/01/14 21:17:11 by zachary       ########   odam.nl         */
+/*   Updated: 2021/02/24 05:39:18 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *toadd;
+	t_list	*toadd;
 
 	if (!*lst)
 		*lst = new;

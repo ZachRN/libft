@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/08 12:45:39 by zachary       #+#    #+#                 */
-/*   Updated: 2021/01/08 17:46:07 by zachary       ########   odam.nl         */
+/*   Updated: 2021/02/24 05:41:56 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *str;
-	unsigned char *test;
+	unsigned char	*str;
+	unsigned char	*test;
 
 	str = (unsigned char *)dest;
 	test = (unsigned char *)src;
