@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 12:09:34 by zachary       #+#    #+#                 */
-/*   Updated: 2020/11/19 14:57:20 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/24 05:55:23 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int i;
+	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
+	i = ft_strlen(str);
 	while (i >= 0)
 	{
 		if (str[i] == c)

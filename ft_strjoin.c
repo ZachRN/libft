@@ -6,13 +6,13 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 15:51:36 by znajda        #+#    #+#                 */
-/*   Updated: 2021/01/04 05:13:56 by zachary       ########   odam.nl         */
+/*   Updated: 2021/02/24 05:43:44 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		x;
 	int		y;

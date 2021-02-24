@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/14 22:30:11 by zachary       #+#    #+#                 */
-/*   Updated: 2021/01/14 22:53:29 by zachary       ########   odam.nl         */
+/*   Updated: 2021/02/24 05:39:40 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *clear;
+	t_list	*clear;
 
 	if (!*lst)
 		return ;

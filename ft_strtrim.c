@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 17:32:32 by znajda        #+#    #+#                 */
-/*   Updated: 2021/02/10 15:47:41 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/24 05:47:02 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	trimmer(char const *s1, char const *set, int i)
 {
-	int j;
+	int	j;
 
 	j = 0;
 	while (set[j] != '\0')
@@ -26,7 +26,7 @@ static int	trimmer(char const *s1, char const *set, int i)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		front;
 	int		end;
@@ -42,7 +42,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 		front++;
 	while (trimmer(s1, set, (end - 1)) && end > front)
 		end--;
-	if (!(str = (char *)malloc(sizeof(char) * (end - front + 1))))
+	str = (char *)malloc(sizeof(char) * (end - front + 1));
+	if (!str)
 		return (NULL);
 	while (front < end)
 	{

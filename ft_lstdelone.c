@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstdelone_bonus.c                               :+:    :+:            */
+/*   ft_lstdelone.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/14 21:23:59 by zachary       #+#    #+#                 */
-/*   Updated: 2021/02/10 16:19:39 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/24 05:39:45 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list *target;
+	t_list	*target;
 
 	if (!lst)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 12:01:49 by znajda        #+#    #+#                 */
-/*   Updated: 2021/01/17 20:37:38 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/24 06:06:03 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	free_my_lines(char **strsplit, int line)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < line)
@@ -27,7 +27,7 @@ static void	free_my_lines(char **strsplit, int line)
 
 static char	**wordinput(char const *s, int pos[2], int line, char **strsplit)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	strsplit[line] = (char *)malloc((pos[0] - pos[1] + 2) * sizeof(char *));
@@ -48,8 +48,8 @@ static char	**wordinput(char const *s, int pos[2], int line, char **strsplit)
 
 static char	**wordfill(char const *s, char c, char **strsplit)
 {
-	int pos[2];
-	int line;
+	int	pos[2];
+	int	line;
 
 	pos[0] = 0;
 	line = 0;
@@ -91,7 +91,7 @@ static int	word_amount(const char *s, char c)
 	return (words);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**strsplit;
 	int		words;

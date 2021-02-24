@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/19 16:10:43 by znajda        #+#    #+#                 */
-/*   Updated: 2020/11/19 16:57:43 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/24 06:01:43 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 	else
-		ft_putchar_fd(n + 48, fd);
+		ft_putchar_fd(n + '0', fd);
 }

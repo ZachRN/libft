@@ -6,13 +6,13 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 10:03:54 by zachary       #+#    #+#                 */
-/*   Updated: 2020/11/19 15:00:09 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/24 15:49:04 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if (c >= 48 && c <= 57)
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 18:04:10 by zachary       #+#    #+#                 */
-/*   Updated: 2021/01/04 14:12:21 by zachary       ########   odam.nl         */
+/*   Updated: 2021/02/24 05:44:21 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!dst)
-		return (size_t)(NULL);
+		return ((size_t)(NULL));
 	if (size == 0)
 	{
 		while (src[i] != '\0')

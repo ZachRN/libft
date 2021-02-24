@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/26 11:02:37 by znajda        #+#    #+#                 */
-/*   Updated: 2021/01/17 21:42:31 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/24 05:37:39 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t nmeb, size_t size)
 {
-	void *memory;
+	void	*memory;
 
 	if (nmeb == 0 || size == 0)
 	{
