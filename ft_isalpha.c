@@ -6,13 +6,13 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 09:49:29 by zachary       #+#    #+#                 */
-/*   Updated: 2021/02/24 05:38:03 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/24 06:00:24 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
 	return (0);
 }

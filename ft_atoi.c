@@ -6,7 +6,7 @@
 /*   By: zachary <zachary@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 10:46:56 by zachary       #+#    #+#                 */
-/*   Updated: 2021/02/24 05:36:38 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/24 05:58:09 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,23 @@ int	ft_atoi(const char *c)
 
 	sign = 1;
 	value = 0;
-	while (*c == 32 || (*c >= 9 && *c <= 13))
+	while (*c == ' ' || (*c >= 9 && *c <= 13))
 		c++;
-	if (*c == 45 || *c == 43)
+	if (*c == '-' || *c == '+')
 	{
-		if (*c == 45)
+		if (*c == '-')
 			sign = -1;
 		c++;
 	}
-	while (*c >= 48 && *c <= 57)
+	while (*c >= '0' && *c <= '9')
 	{
-		if (((value * 10 * sign) > 922337203685477580 && *c > 55)
+		if (((value * 10 * sign) > 922337203685477580 && *c > '7')
 			|| (value * 10 * sign) >= 9223372036854775800)
 			return (-1);
-		else if (((value * 10 * sign) < -922337203685477580 && *c > 56)
+		else if (((value * 10 * sign) < -922337203685477580 && *c > '8')
 			|| (value * 10 * sign) <= -9223372036854775800)
 			return (0);
-		value = (value * 10) + (*c - 48);
+		value = (value * 10) + (*c - '0');
 		c++;
 	}
 	return ((int)(value * sign));

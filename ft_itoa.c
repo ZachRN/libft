@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/26 07:59:32 by znajda        #+#    #+#                 */
-/*   Updated: 2021/02/24 05:38:54 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/24 06:03:31 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*ft_itoa(int n)
 	}
 	while (i < strlen)
 	{
-		str[j] = currentnum(n, (strlen - i)) + 48;
+		str[j] = currentnum(n, (strlen - i)) + '0';
 		j++;
 		i++;
 	}
