@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 12:01:49 by znajda        #+#    #+#                 */
-/*   Updated: 2021/02/24 06:06:03 by znajda        ########   odam.nl         */
+/*   Updated: 2021/02/28 15:52:46 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char	**wordfill(char const *s, char c, char **strsplit)
 			wordinput(s, pos, line, strsplit);
 			if (strsplit == NULL)
 				return (NULL);
-			while (s[pos[0]] == c)
+			while (s[pos[0]] == c && c != '\0')
 				pos[0]++;
 			pos[1] = pos[0];
 			line++;
