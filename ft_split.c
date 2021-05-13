@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 12:01:49 by znajda        #+#    #+#                 */
-/*   Updated: 2021/02/28 15:52:46 by znajda        ########   odam.nl         */
+/*   Updated: 2021/05/13 11:15:39 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static char	**wordfill(char const *s, char c, char **strsplit)
 
 	pos[0] = 0;
 	line = 0;
-	while (s[pos[0]] == c)
+	while (s[pos[0]] == c && c != '\0')
 		pos[0] += 1;
 	pos[1] = pos[0];
 	while (s[pos[0]] != '\0')
@@ -80,7 +80,7 @@ static int	word_amount(const char *s, char c)
 
 	pos = 0;
 	words = 0;
-	while (s[pos] == c)
+	while (s[pos] == c && c != '\0')
 		pos++;
 	while (s[pos] != '\0')
 	{
