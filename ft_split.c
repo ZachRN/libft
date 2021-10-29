@@ -6,7 +6,7 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 12:01:49 by znajda        #+#    #+#                 */
-/*   Updated: 2021/05/13 15:42:50 by znajda        ########   odam.nl         */
+/*   Updated: 2021/10/29 15:44:33 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static char	**wordinput(char const *s, int pos[2], int line, char **strsplit)
 	int	i;
 
 	i = 0;
-	strsplit[line] = (char *)malloc((pos[0] - pos[1] + 2) * sizeof(char *));
+	strsplit[line] = (char *)malloc((pos[0] - pos[1]) * sizeof(char));
 	if (strsplit[line] == NULL)
 	{
 		free_my_lines(strsplit, line);
@@ -106,5 +106,5 @@ char	**ft_split(char const *s, char c)
 	wordfill(s, c, strsplit);
 	if (strsplit == NULL)
 		return (NULL);
-	return (&strsplit[0]);
+	return (strsplit);
 }

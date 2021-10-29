@@ -6,28 +6,19 @@
 /*   By: znajda <znajda@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 15:07:28 by znajda        #+#    #+#                 */
-/*   Updated: 2021/01/04 05:09:18 by zachary       ########   odam.nl         */
+/*   Updated: 2021/10/29 20:51:44 by znajda        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static void	fill(char const *s, size_t len, char *str, size_t start)
 {
-	char			*str;
-	unsigned int	i;
-	unsigned int	x;
+	size_t	i;
+	size_t	x;
 
-	i = 0;
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (str == NULL || s == NULL)
-		return (NULL);
 	x = ft_strlen(s);
-	if (start >= x)
-	{
-		str[0] = '\0';
-		return (str);
-	}
+	i = 0;
 	while (start < x && i < len)
 	{
 		str[i] = s[start];
@@ -35,5 +26,26 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 	}
 	str[i] = '\0';
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char			*str;
+	size_t			x;
+
+	if (!s)
+		return (NULL);
+	x = ft_strlen(s);
+	if (len > x)
+		len = x;
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	if (start >= x)
+	{
+		str[0] = '\0';
+		return (str);
+	}
+	fill(s, len, str, start);
 	return (str);
 }
