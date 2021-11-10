@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_strnstr.c                                       :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: zachary <zachary@student.codam.nl>           +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2020/10/30 13:05:15 by zachary       #+#    #+#                 */
-/*   Updated: 2021/02/24 05:45:37 by znajda        ########   odam.nl         */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *small, size_t len)
