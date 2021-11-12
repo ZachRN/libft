@@ -3,6 +3,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+//passed
+
 typedef struct s_list
 {
 	void			*content;
